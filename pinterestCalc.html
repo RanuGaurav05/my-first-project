@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+             
+        /* font-family: "Orbitron", sans-serif; */
+        height: 100%;
+        width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main h-full w-full bg-purple-300 pt-23" >
+        <div class="calculator h-130 w-90 bg-gray-300 mx-auto rounded-3xl shadow-2xl pt-10">
+            <div class="input w-80 h-20 bg-gradient-to-r from-green-200 to-teal-200 rounded-full shadow-xl mx-auto text-right pt-5">
+                <input type="text" class="flex items-center  mx-auto w-70 h-12 rounded-full text-right px-1 font-medium text-5xl focus:outline-none focus:ring-0 focus:border-transparent" placeholder="0">
+            </div>
+            <div class="row1 flex items-center gap-7 justify-center  mt-6 font-medium text-xl text-gray-900 items-center opacity-80 ">
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">clr</button>
+                <button class=" rounded-full w-14 h-14 px-2 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">DEL</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">%</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">/</button>
+            </div>
+            <div class="row2 flex items-center gap-7 justify-center mt-4 font-medium text-xl text-gray-900 items-center opacity-80 ">
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">7</button>
+                <button class=" rounded-full w-14 h-14 px-2 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">8</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">9</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">*</button>
+            </div>
+            <div class="row3 flex items-center gap-7 justify-center mt-4 font-medium text-xl text-gray-900 items-center opacity-80 ">
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">4</button>
+                <button class=" rounded-full w-14 h-14 px-2 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">5</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">6</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">-</button>
+            </div>
+            <div class="row4 flex items-center gap-7 justify-center mt-4 font-medium text-xl text-gray-900 items-center opacity-80">
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">1</button>
+                <button class=" rounded-full w-14 h-14 px-2 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">2</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">3</button>
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">+</button>
+            </div>
+            <div class="row5 flex items-center gap-7 justify-center mt-4 font-medium text-xl text-gray-900 items-center opacity-80 ">
+                <button class=" rounded-full w-14 h-14 px-4 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">.</button>
+                <button class=" rounded-full w-14 h-14 px-2 py-2 drop-shadow-xl hover:from-green-200 hover:to-teal-200 bg-gradient-to-r from-green-100 to-teal-100">0</button>
+                <button class=" rounded-full w-34 h-13 px-4 py-0 drop-shadow-xl hover:bg-pink-500 bg-pink-400">=</button>
+            
+            </div>
+        </div>
+    </div>
+
+    <script>
+         const input = document.querySelector("input");
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      let value = button.innerText.trim();
+
+      if (value === "clr") {
+        input.value = "";
+      } else if (value === "DEL") {
+        input.value = input.value.slice(0, -1);
+      } else if (value === "=") {
+        try {
+          input.value = eval(input.value);
+        } catch {
+          input.value = "Error";
+        }
+      } else {
+        input.value += value;
+      }
+    });
+  });
+    </script>
+        
+</body>
+</html>
